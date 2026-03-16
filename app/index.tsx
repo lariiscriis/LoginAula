@@ -1,8 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { TextInput } from 'react-native';
-import Botao from './components/botao'
+import Botao from '../components/botao'
 import { use, useState } from 'react';
+  import {router} from 'expo-router';
+
 
 export default function App() {
   // const [nome, setNome] = useState('')
@@ -11,13 +13,14 @@ export default function App() {
   // const [idade, setIdade] = useState('')
   // const [sobre, setSobre] = useState('')
   const [dados, setDados] = useState('')
-
+  
   function cadastrar(){
 
-    if( email==='mobile2@email.com' && senha === 'mobile2'){
+    if( email=='mobile2@email.com' && senha == 'mobile2'){
     const cadastro = `
       Login realizado com sucessos divx!!!!!!
     `
+    router.push('\dashboard')
     
     setDados(cadastro)
   }      
