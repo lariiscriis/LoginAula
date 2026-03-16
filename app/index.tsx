@@ -17,12 +17,9 @@ export default function App() {
   function cadastrar(){
 
     if( email=='mobile2@email.com' && senha == 'mobile2'){
-    const cadastro = `
-      Login realizado com sucessos divx!!!!!!
-    `
-    router.push('\dashboard')
+    alert('Login Realizado divssss!')
+    router.push({pathname:'\dashboard', params:{id: '0001', email, senha}})
     
-    setDados(cadastro)
   }      
   else{
     setDados('Preencha todos os campooooooooooos')
